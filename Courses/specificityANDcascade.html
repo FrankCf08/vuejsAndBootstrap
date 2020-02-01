@@ -1,0 +1,44 @@
+<!-- Any changes in the parent affects on the child -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Specificity</title>
+
+	<style type="text/css">
+		
+		/* it can be see that all the p and ul inherites the colours 
+
+			inline styles > IDs > Classes, attributes and pseudo-classes > elements and pseudo elemte
+		*/
+		body{
+			color: red;
+		}
+		p{
+			color: green;
+		}
+		ul{
+			color: blue;
+		}
+		li{
+			color: yellow;
+		}
+		.specified{
+			color: brown;
+		}
+		#special{
+			color: purple;
+		}
+	</style>
+</head>
+<body>
+	<!-- We will see the way inheritance works -->
+	<p> Hello </p>
+
+	<ul>
+		<li id="special" class="specified">John</li>
+		<li>Paul</li>
+		<li class="specified">George</li>
+		<li>Ringo</li>
+	</ul>
+</body>
+</html>

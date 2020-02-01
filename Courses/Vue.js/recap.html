@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recap All</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app"> 
+        <!-- <h1>{{ message }}</h1>
+        <input type="text" v-model="message">
+
+        <h1 v-show="connect"> Hi I am a hidden H1</h1>
+        <h2 v-if="age < 18"> No puedes entrar </h2>
+        <h2 v-else-if="age >200"> YOU are inmortal</h2>
+        <h2 v-else>You can come in</h2>
+
+        <template v-if="connect">
+            <h1> Hi I am from the template</h1>
+            <ul>
+                <li><a href="#">Enlace</a></li>
+                <li><a href="#">Enlace</a></li>
+                <li><a href="#">Enlace</a></li>
+                <li><a href="#">Enlace</a></li>
+            </ul>
+        </template>
+            <h2> Matriz: Days </h2>
+            <ul>
+                <li v-for="day in days"> {{day}}</li>
+            </ul>
+            <h2> Matriz of Objects: Duties</h2>
+            <ul>
+                <li v-for="(duty, i) in duties">{{i+1 }} - {{duty.name}} <small> ({{duty.priority}})</small> </li>
+            </ul>
+            <h2>Object</h2>
+            <ul>
+                <li v-for="(value, key, index) in person"> {{value}} </li>
+            </ul>
+            <ul>
+                <li v-for="value in person"> {{ value }}</li>
+            </ul> -->
+        <!-- <template>
+            <h1>Event Listener</h1>
+            <ol>
+                <li v-for="hw in houseWork">
+                     {{ hw }}
+                </li>
+            </ol>
+            <input type="text" placeholder="Enter duty" v-model="newHouseWork" v-on:keyup.enter="addDuty">
+            <input type="button" value="Enter Tarea" v-on:click="addDuty">
+
+            <form v-on:submit.prevent="addDuty">
+                <input type="text" placeholder="Enter duty" v-model="newHouseWork" v-on:keyup.enter="addDuty">
+                <input type="submit" value="Enter Tarea"> 
+            </form>
+        </template> -->
+
+        <div>
+            <h1> {{ message }} </h1>
+            <h1> {{ messageReversed }} </h1>
+        </div>
+
+        <template>
+            <h1>Filter by Priority </h1>
+            <ul>
+                <li v-for="duty in filterDutyPriority"> {{ duty.name }} </li>
+            </ul>
+
+            <h1>Sort by aged</h1>
+            <ul>
+                <li v-for="duty in filterbyAged"> {{ duty.name }} </li>
+            </ul>
+        </template>
+
+        <pre> {{ $data }}</pre>
+    </div>
+
+    <script src="recap.js"></script>
+
+</body>
+</html>

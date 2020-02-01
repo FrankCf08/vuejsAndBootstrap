@@ -1,0 +1,17 @@
+img{
+	width: 30%; /*to make sure we can put 3 pictures in a row and have 10% left*/
+	float: left;
+	margin: 1.6%;
+}
+p{
+	font-family: Open Sans;
+	margin-left: 1.66%;
+	font-size: 25px;
+	font-weight: 800;
+	text-transform: uppercase;
+
+	border-bottom: 3px solid #f1f1f1;
+	width: 45%;
+
+	padding-bottom: 20px;
+}

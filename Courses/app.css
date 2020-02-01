@@ -1,0 +1,15 @@
+/*
+	color:rgba(RED,GREEN,BLUE,(transparent))
+	values from 0-255
+	transparet: 0-1;
+*/
+h1{
+	color: rgba(255,0,0,.2);
+}
+
+h4{
+	color: green;
+}
+li{
+	color: blue;
+}

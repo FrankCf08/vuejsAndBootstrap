@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My title</title>
+		<script>
+		function getHtml(){
+			var tag = document.getElementById("id").innerHTML;
+
+			console.log(tag);
+		}
+	</script>
+</head>
+<body>
+
+	<h1>I am an h1</h1>
+	<p id="first" class="special">Hello</p>
+	<p class="special">GoodBye</p>
+	<p>Hi again!</p>
+	<p id="last"> Goodbye Again</p>
+
+	<p id="demo"></p>
+
+
+</body>
+</html>
+
+<!-- 4ways to get  
+	var p = document.getElementById("first");
+
+	var byClass = document.getElementsByClassName("special");
+
+	var byQS = document.querySelector("#first");
+
+	var byQSClass = document.querySelector(".special")[0]
+
+	var byQSClass =  document.querySelectorAll(".speacial")[0]
+
+	document.getElementsByTagName("p");
+
+	document.getElementsByTagName("p")[0]
+
+	document.querySelector("p")
+
+	document.querySelectorAll("p")[0]
+
+	document.querySelector("h1 + p")
+-->

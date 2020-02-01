@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app"> 
+        <div>
+            <input type="button" value="Show me/Hide me" @click="showMe">
+        
+            <!-- Transition -->
+            <transition name="showhide">
+                <h1 v-show="showMessage"> {{ messages.transition}} </h1>
+            </transition>
+
+            <!-- Animation -->
+            <transition name="showhideBounce">
+                <h1 v-show="showMessage"> {{ messages.animacion}} </h1>
+            </transition>
+
+            <!-- Transition -->
+            <transition appear mode="out-in">
+                <h1 v-if="showMessage" key="enterElements"> {{ messages.entraElements}} </h1>
+                <h1 v-else key="leaveElements">There are no messages</h1>
+            </transition>
+        </div>
+        
+        <pre> {{ $data }}</pre>
+    </div>
+
+    <script src="transition.js"></script>
+
+</body>
+</html>

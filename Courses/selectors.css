@@ -1,0 +1,87 @@
+/*
+	Slectors:
+	- Elements
+	h1{
+	
+	}
+	- ID's
+	#(name of id){
+		color
+		etc
+	}
+
+	-CLASSES
+	.(name of class){
+	
+		text-decoration: line-through;
+	}
+*/
+
+
+/*Elemts*/
+li{
+	
+}
+/*ID's
+	Only works in a single input, it can be mulple elemtns with the same ID
+	Example: <input id="nameID" >ID</input>*/
+#nameID{
+	
+}
+
+/*class
+	There can be more thna one class with same name
+	Example: <input class="completed">Dollars</input>;
+*/
+.className{
+	text-decoration: line-through;
+	background: pink;
+}
+
+/*Start
+	Slects everything on the page
+*/
+
+*{
+	border: 1px solid lightgray;
+}
+
+/*Descendant Selector
+	selects elements inside of other elements
+	works like nested elements
+	-Example: <ul><li><a> tag name</a><li><ul> but this is redundatn in this case
+	so it can be simplified as <li><a> ....
+	-Also work with classes: li className;
+*/
+
+li a {
+	color:red;
+}
+
+/*Adjencent selector
+	Select elements after this in the same level:
+	Example: <h4> ... </h4>
+			 <ul> ..... </ul>
+
+*/
+
+h4 + ul {
+	border-color: red;
+}
+
+/*Attribute selectors
+	slectes attributes with the same element name*/
+	a[href="http://www.google.com"]{
+		background: blue;
+	}
+
+	input[type="text"]{
+		border-color: red;
+	}
+
+/* nth of type
+	Select a nth element in a group of family.
+*/
+li:nth-of-type(3){
+	background: pink;
+}

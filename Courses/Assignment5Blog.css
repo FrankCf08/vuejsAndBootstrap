@@ -1,0 +1,50 @@
+body{
+	border: 20px solid #bdc3c7;
+	/*Padding: to make a range between the border and the element*/
+	padding: 20px;
+	/*width: to stretch the sides*/
+	max-width: 700px;
+	width: 80%;
+	/*Margin: (top and bottom) (left and right)*/
+	margin: 20px auto;
+
+	font-family: Source Sans Pro;
+}
+
+.date{
+	color:#3498db;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+
+}
+.sideLine{
+	border-left: 5px solid #bdc3c7;
+	padding: 10px;
+}
+
+.sideLine:first-letter{
+	font-size: 3rem;
+}
+
+h2{
+	color:#2c3e50;
+	font-size: 2.0rem;
+}
+h2:hover{
+	color:red;
+}
+
+/* Flaired edges, by Tomas Theunissen */
+
+hr{
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+}
+hr:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}
+
+.post{
+	margin: 40px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filters</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app"> 
+        <h1>Duties</h1>
+        <h3 v-bind:class>{{countDuties.length}} completed </h3>
+        <ul>
+            <li 
+                v-for="duty in duties"
+                v-on:click="changeStatus(duty)"
+                :class="{completed: duty.completed}"> 
+                {{duty.title}}
+            </li>
+        </ul>
+        <pre> {{ $data }}</pre>
+    </div>
+
+    <script src="dataBinding.js"></script>
+
+</body>
+</html>

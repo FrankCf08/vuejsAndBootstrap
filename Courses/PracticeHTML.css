@@ -1,0 +1,26 @@
+img{
+	width: 100px;
+}
+
+.birthday{
+	color: red;
+	border: 2px solid black;
+	margin: 10px;
+	padding: 1rem;
+}
+
+label select{
+	color:yellow;
+}
+
+input + label {
+	background: green;
+}
+
+select:nth-of-type(odd){
+	background:purple;
+}
+
+select[name="day"]{
+	border: 1px solid orange;
+}

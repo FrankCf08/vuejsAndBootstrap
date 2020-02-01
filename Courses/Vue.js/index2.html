@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 2</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="app">
+
+        <!-- Tile, input and button -->
+        <h1> {{mytitle}}</h1>
+
+        <p>
+            <input v-model= "module" type="text" placeholder="Module title">
+        </p>
+        <p>
+            <input v-model="time" type="number" placeholder="Time">
+        </p>
+        <p>
+            <button v-on:click="addModule"> Save module</button>
+        </p>
+
+        <div>
+            <h3> List of modules </h3>
+            <p v-show="arrayLength == 0" class = "red"> There haven't been added any module yet</p>
+            
+            <div>
+                <ol v-for="p in moduleArray">
+                    {{p.module}} - {{p.time}} hours
+                </ol>
+            </div>
+
+            <hr/>
+
+            <p> I have <strong> {{totalTime}} hours learning in Platzi.</strong> 
+                <strong> #Never give up</strong>
+            </p>
+        </div>
+
+
+    </div>
+
+    <script src="index2.js"></script>
+</body>
+</html>

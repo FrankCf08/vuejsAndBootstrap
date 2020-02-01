@@ -1,0 +1,46 @@
+/*
+	Background style
+
+	body{
+		background:#color;
+	}
+
+	To specify as backgroun for an image
+
+	body{
+		background: url(......);
+	}
+
+	Border style
+
+	h1{
+		color
+		width
+		style (solid, dashed)
+	}
+	h1{
+		Adding all at the same time
+		border: 5px solid purple;
+	}
+*/
+
+h1{
+	color: #00ddaa;
+	border-color: purple;
+	border-width: 5px;
+	border-style: dashed;
+}
+
+h4{
+	background: rgb(255,100,100);
+	border: 5px solid red;
+}
+body{
+
+	background: pink;
+	/*background: url(https://wallpapercave.com/wp/L4ESa9b.jpg);
+	/*To make it not repeated*/
+	/*background-repeat: no-repeat; 
+	to expand my image to cover all
+	background-size: cover;*/
+}

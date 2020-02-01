@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class10: v-model and computed</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="app" v-bind:style=" {background: '#' + color}">
+        <h1 
+            v-bind:class="changePercentage > 0 ? 'green' : 'red'">
+            <img 
+                v-bind:src="img" alt="name"
+                v-on:mouseover="togglePrices"
+                v-on:mouseout="togglePrices">
+               {{title}}
+
+            <span v-if="changePercentage > 0"> -> Great deal!</span>
+            <span v-else-if="changePercentage <0"> -> No good!</span>
+            <span v-else="changePercentage == 0"> ->  it is fine!</span>
+        </h1>
+
+        <div v-on:click="togglePrices">
+            {{showPrices? 'Hide': 'Show'}}
+        </div>
+        <div>
+            <input type="number" v-model="value">
+            <span> {{ convertValue }}</span>
+            <ul v-show ="showPrices">
+                <li 
+                    v-for="(price, index) in priceWithDay" v-bind:key="price.id"
+                    v-bind:class="{red: priceToday > price.value , green: priceToday < price.value, orange: priceToday == price.value }">
+                    {{index}} - {{price.day}} - value: {{price.value}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="class10.js"></script>
+    
+</body>
+</html>
